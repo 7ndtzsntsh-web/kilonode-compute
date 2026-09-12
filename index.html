@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth bg-[#050505] text-[#EDEDED]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KILONODE // High-Performance AI Compute &amp; Cloud Fabric</title>
+  <meta name="description" content="KILONODE AI Compute Fabric. Clusters de GPU H100 SXM5 e B200 NVLink de ultra-baixa latência com 3.2 Tbps InfiniBand e 1.08 PUE. Conheça e teste agora!">
+  <link rel="canonical" href="https://kilonode-compute.vercel.app/">
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kilonode-compute.vercel.app/">
+  <meta property="og:title" content="KILONODE // High-Performance AI Compute &amp; Cloud Fabric">
+  <meta property="og:description" content="KILONODE AI Compute Fabric. Clusters de GPU H100 SXM5 e B200 NVLink de ultra-baixa latência com 3.2 Tbps InfiniBand e 1.08 PUE. Conheça e teste agora!">
+  <meta property="og:image" content="https://kilonode-compute.vercel.app/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://kilonode-compute.vercel.app/">
+  <meta name="twitter:title" content="KILONODE // High-Performance AI Compute &amp; Cloud Fabric">
+  <meta name="twitter:description" content="KILONODE AI Compute Fabric. Clusters de GPU H100 SXM5 e B200 NVLink de ultra-baixa latência com 3.2 Tbps InfiniBand e 1.08 PUE. Conheça e teste agora!">
+  <meta name="twitter:image" content="https://kilonode-compute.vercel.app/og-image.jpg">
+
+  <!-- Google Fonts: Space Grotesk & Space Mono (Strict 2-Font System) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org SoftwareApplication / Organization JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KILONODE Compute Fabric",
+    "alternateName": "KILONODE Cloud",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Linux, Cloud, Kubernetes",
+    "image": "https://kilonode-compute.vercel.app/og-image.jpg",
+    "logo": "https://kilonode-compute.vercel.app/logo.png",
+    "@id": "https://kilonode-compute.vercel.app/#application",
+    "url": "https://kilonode-compute.vercel.app/",
+    "offers": {
+      "@type": "Offer",
+      "price": "2.45",
+      "priceCurrency": "USD"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "KILONODE Infrastructure Corp",
+      "url": "https://kilonode-compute.vercel.app/"
+    }
+  }
+  </script>
+</head>
+<body class="bg-[#050505] text-[#EDEDED] antialiased selection:bg-[#0055FF] selection:text-white overflow-x-hidden w-full max-w-full font-tech">
+
+  <!-- Telemetry Top Bar (Engineered Real-Time Metrics) -->
+  <div class="bg-[#080808] border-b border-white/10 text-[11px] font-mono tracking-widest text-neutral-400 py-2.5 px-6 md:px-12 uppercase">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
+        <span class="text-white font-bold">[ SYSTEM // FABRIC ONLINE ]</span>
+        <span class="text-neutral-600 hidden sm:inline">•</span>
+        <span class="text-neutral-400 hidden sm:inline">NODES: 14,280 ACTIVE</span>
+      </div>
+      <div class="flex items-center gap-6 text-[10px]">
+        <span class="hidden md:inline text-neutral-500">GLOBAL LATENCY: <span class="text-[#0055FF] font-bold">11.4 MS</span></span>
+        <span class="hidden lg:inline text-neutral-500">INTERCONNECT: <span class="text-white font-bold">3.2 TBPS INFINIBAND</span></span>
+        <span class="text-neutral-500">PUE EFFICIENCY: <span class="text-[#00FF66] font-bold">1.08</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Architectural Navbar (1px Razor Sharp Grid) -->
+  <header class="sticky top-0 z-50 bg-[#050505]/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+      
+      <!-- Brand Emblema & Technical Moniker -->
+      <a href="#inicio" class="flex items-center gap-3.5 group">
+        <div class="w-9 h-9 border border-white/20 bg-black p-1 flex items-center justify-center group-hover:border-[#0055FF] transition-colors duration-200">
+          <img src="logo.png" alt="KILONODE Emblem" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-lg text-white tracking-tight leading-none group-hover:text-[#0055FF] transition-colors">KILONODE</span>
+          <span class="font-mono text-[9px] tracking-[0.25em] text-neutral-500 uppercase mt-0.5">COMPUTE FABRIC</span>
+        </div>
+      </a>
+
+      <!-- Desktop Micro-Menu Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 font-mono text-xs uppercase tracking-widest text-neutral-400">
+        <a href="#inicio" class="hover:text-white transition-colors py-1">01 // Overview</a>
+        <a href="#architecture" class="hover:text-white transition-colors py-1">02 // Topology</a>
+        <a href="#benchmarks" class="hover:text-white transition-colors py-1">03 // Specs</a>
+        <a href="#calculator" class="hover:text-white transition-colors py-1">04 // Calculator</a>
+        <a href="#network" class="hover:text-white transition-colors py-1">05 // Datacenters</a>
+        <a href="#faq" class="hover:text-white transition-colors py-1">06 // FAQ</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="#calculator" class="btn-tech-primary">
+          <span>DEPLOY CLUSTER</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-btn" type="button" aria-label="Abrir Menu de Navegação" class="md:hidden p-2 text-neutral-300 hover:text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed inset-y-0 right-0 max-w-xs w-full bg-[#0A0A0A] border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-white/10">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="Kilonode Logo" class="w-8 h-8 border border-white/20">
+          <span class="font-bold text-white tracking-widest font-mono text-sm">KILONODE</span>
+        </div>
+        <button id="mobile-menu-close-btn" type="button" aria-label="Fechar Menu" class="p-2 text-neutral-400 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <nav class="mt-8 flex flex-col space-y-5 font-mono text-xs uppercase tracking-widest text-neutral-400">
+        <a href="#inicio" class="mobile-nav-link hover:text-white py-1">01 // Overview</a>
+        <a href="#architecture" class="mobile-nav-link hover:text-white py-1">02 // Topology</a>
+        <a href="#benchmarks" class="mobile-nav-link hover:text-white py-1">03 // Specs</a>
+        <a href="#calculator" class="mobile-nav-link hover:text-white py-1">04 // Calculator</a>
+        <a href="#network" class="mobile-nav-link hover:text-white py-1">05 // Datacenters</a>
+        <a href="#faq" class="mobile-nav-link hover:text-white py-1">06 // FAQ</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-white/10 space-y-4 font-mono">
+      <div class="text-[10px] text-neutral-500">
+        <div>FABRIC: VERSION 4.2.0-STABLE</div>
+        <div class="text-white mt-1">STATUS: ALL REGIONS OPERATIONAL</div>
+      </div>
+      <a href="#calculator" class="w-full btn-tech-primary text-center">
+        DEPLOY CLUSTER
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION (Asymmetrical Structural Grid & Raw Architectural Photography) -->
+    <section id="inicio" class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 border-b border-white/10 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <!-- Breadcrumb / System Identifier -->
+        <div class="font-mono text-xs text-[#0055FF] uppercase tracking-[0.35em] mb-6 flex items-center gap-3 reveal-on-scroll">
+          <span>FABRIC ARCHITECTURE // 01</span>
+          <span class="h-[1px] w-12 bg-[#0055FF]/40"></span>
+          <span class="text-neutral-400">ZERO VIRTUALIZATION OVERHEAD</span>
+        </div>
+
+        <!-- Single Unique H1 (AGENTS.md Requirement) -->
+        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold uppercase tracking-tighter leading-[0.92] mb-10 max-w-5xl select-none reveal-on-scroll">
+          DISTRIBUTED <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-500">AI COMPUTE</span> <br>
+          FABRIC.
+        </h1>
+
+        <!-- Asymmetrical Grid: Description + Technical Specs + Architectural Imagery -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left Column: Engineered Manifesto & Action Blocks -->
+          <div class="lg:col-span-6 flex flex-col justify-between reveal-on-scroll">
+            <p class="font-mono text-xs sm:text-sm text-neutral-300 leading-relaxed border-l-2 border-[#0055FF] pl-4 mb-8 bg-[#0A0A0A] p-4 border border-white/5">
+              Instâncias bare-metal de H100 SXM5 e Blackwell B200 interconectadas por InfiniBand Quantum-2 a 3.2 Tbps. Projetadas para treinamento de modelos de fronteira, fine-tuning distribuído e inferência com tempo até o primeiro token em sub-15ms.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+              <a href="#calculator" class="btn-tech-primary">
+                <span>SIMULAR INSTÂNCIA</span>
+                <span>→</span>
+              </a>
+              <a href="#architecture" class="btn-tech-secondary">
+                <span>VER TOPOLOGIA DE REDE</span>
+              </a>
+            </div>
+
+            <!-- Precision Data Highlights -->
+            <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 font-mono">
+              <div class="border-r border-white/10 pr-4">
+                <span class="block text-[10px] text-neutral-500 uppercase">GPU INTERCONNECT</span>
+                <span class="text-lg sm:text-xl font-bold text-white">900 GB/S</span>
+                <span class="block text-[10px] text-neutral-600 mt-0.5">NVLink Gen 4</span>
+              </div>
+              <div class="border-r border-white/10 pr-4">
+                <span class="block text-[10px] text-neutral-500 uppercase">NETWORK FABRIC</span>
+                <span class="text-lg sm:text-xl font-bold text-[#0055FF]">3.2 TBPS</span>
+                <span class="block text-[10px] text-neutral-600 mt-0.5">Non-blocking fat-tree</span>
+              </div>
+              <div>
+                <span class="block text-[10px] text-neutral-500 uppercase">UPTIME SLA</span>
+                <span class="text-lg sm:text-xl font-bold text-[#00FF66]">99.995%</span>
+                <span class="block text-[10px] text-neutral-600 mt-0.5">Bare-metal hardware</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Raw Datacenter Architectural Photography & Schematics -->
+          <div class="lg:col-span-6 relative reveal-on-scroll">
+            <div class="border border-white/15 bg-[#080808] p-3 shadow-2xl relative">
+              <div class="relative aspect-[16/11] overflow-hidden bg-black">
+                <img 
+                  src="img/datacenter-architecture.jpg" 
+                  alt="Servidores bare-metal de alta densidade em rack de computação KILONODE" 
+                  class="w-full h-full object-cover grayscale contrast-125 hover:scale-105 transition-transform duration-700"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
+
+                <!-- Live Node Indicator Overlaid -->
+                <div class="absolute top-4 left-4 bg-[#050505]/90 border border-white/20 px-3 py-1.5 font-mono text-[10px] tracking-widest text-neutral-300 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[#00FF66] animate-ping"></span>
+                  CLUSTER-US-EAST-01 // RACK 42
+                </div>
+
+                <!-- Hardware Metric Badge -->
+                <div class="absolute bottom-4 left-4 right-4 bg-black/90 border border-white/15 p-4 font-mono text-xs flex items-center justify-between">
+                  <div>
+                    <span class="block text-[10px] text-[#0055FF] font-bold">COMPUTE SPECIFICATION</span>
+                    <span class="text-white font-bold">8x NVIDIA H100 80GB SXM5</span>
+                  </div>
+                  <span class="text-[11px] text-neutral-400 border border-white/20 px-2 py-1">640 GB HBM3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 02: ARCHITECTURE & VECTOR SCHEMATICS (Topology & Dataflow) -->
+    <section id="architecture" class="py-24 border-b border-white/10 bg-[#070707] relative">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-white/10 reveal-on-scroll">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-[0.3em] text-[#0055FF] font-bold block mb-2">02 // CLOUD TOPOLOGY</span>
+            <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase tracking-tight font-tech">
+              ZERO-HOP INTERCONNECT
+            </h2>
+          </div>
+          <div class="mt-4 md:mt-0 font-mono text-xs text-neutral-400 max-w-md">
+            Topologia de rede em malha completa (full-mesh fat-tree) sem contenção de pacotes. Cada cluster atinge paralelismo de tensores com jitter inferior a 1 microssegundo.
+          </div>
+        </div>
+
+        <!-- High-Contrast Vector Architectural Schematic -->
+        <div class="border border-white/10 bg-[#050505] p-6 md:p-8 mb-12 reveal-on-scroll">
+          <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6 font-mono text-[11px] text-neutral-400 uppercase tracking-widest">
+            <span>FIGURE 2.1 — 8-GPU SXM5 INTERCONNECT WITH QUANTUM-2 LEAF SWITCHES</span>
+            <span class="text-[#0055FF] font-bold">SPEC-OCTA-01</span>
+          </div>
+
+          <!-- SVG Topology Blueprint -->
+          <div class="w-full py-4 flex items-center justify-center">
+            <svg viewBox="0 0 800 240" class="w-full h-auto text-neutral-300" fill="none" stroke="currentColor">
+              <!-- Grid background lines -->
+              <line x1="20" y1="30" x2="780" y2="30" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+              <line x1="20" y1="90" x2="780" y2="90" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+              <line x1="20" y1="150" x2="780" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+              <line x1="20" y1="210" x2="780" y2="210" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+              <!-- Spine Switches Top -->
+              <rect x="220" y="15" width="160" height="30" fill="#0A0A0A" stroke="#0055FF" stroke-width="1.5"/>
+              <text x="300" y="34" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">SPINE 01 // 3.2T</text>
+
+              <rect x="420" y="15" width="160" height="30" fill="#0A0A0A" stroke="#0055FF" stroke-width="1.5"/>
+              <text x="500" y="34" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">SPINE 02 // 3.2T</text>
+
+              <!-- Leaf Bus Links -->
+              <line x1="300" y1="45" x2="160" y2="90" stroke="#0055FF" stroke-width="1"/>
+              <line x1="300" y1="45" x2="320" y2="90" stroke="#0055FF" stroke-width="1"/>
+              <line x1="300" y1="45" x2="480" y2="90" stroke="#0055FF" stroke-width="1"/>
+              <line x1="300" y1="45" x2="640" y2="90" stroke="#0055FF" stroke-width="1"/>
+
+              <line x1="500" y1="45" x2="160" y2="90" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+              <line x1="500" y1="45" x2="320" y2="90" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+              <line x1="500" y1="45" x2="480" y2="90" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+              <line x1="500" y1="45" x2="640" y2="90" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+              <!-- Leaf Switches -->
+              <rect x="100" y="90" width="120" height="26" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1"/>
+              <text x="160" y="107" fill="#D4D4D8" font-family="monospace" font-size="9" text-anchor="middle">LEAF-A [CX-7]</text>
+
+              <rect x="260" y="90" width="120" height="26" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1"/>
+              <text x="320" y="107" fill="#D4D4D8" font-family="monospace" font-size="9" text-anchor="middle">LEAF-B [CX-7]</text>
+
+              <rect x="420" y="90" width="120" height="26" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1"/>
+              <text x="480" y="107" fill="#D4D4D8" font-family="monospace" font-size="9" text-anchor="middle">LEAF-C [CX-7]</text>
+
+              <rect x="580" y="90" width="120" height="26" fill="#0D0D0D" stroke="#FFFFFF" stroke-width="1"/>
+              <text x="640" y="107" fill="#D4D4D8" font-family="monospace" font-size="9" text-anchor="middle">LEAF-D [CX-7]</text>
+
+              <!-- NVLink Mesh Bridge -->
+              <rect x="60" y="150" width="680" height="65" fill="#080808" stroke="#0055FF" stroke-width="1.5"/>
+              <text x="75" y="170" fill="#0055FF" font-family="monospace" font-size="9" font-weight="bold">NVLINK 4.0 FULL MESH [900 GB/S BI-DIRECTIONAL PER GPU]</text>
+
+              <!-- 8x GPU Blocks -->
+              <g id="gpus">
+                <rect x="80" y="180" width="70" height="25" fill="#141414" stroke="#FFFFFF" stroke-width="1"/>
+                <text x="115" y="196" fill="#FFFFFF" font-family="monospace" font-size="9" text-anchor="middle">GPU 0</text>
+
+                <rect x="160" y="180" width="70" height="25" fill="#141414" stroke="#FFFFFF" stroke-width="1"/>
+                <text x="195" y="196" fill="#FFFFFF" font-family="monospace" font-size="9" text-anchor="middle">GPU 1</text>
+
+                <rect x="240" y="180" width="70" height="25" fill="#141414" stroke="#FFFFFF" stroke-width="1"/>
+                <text x="275" y="196" fill="#FFFFFF" font-family="monospace" font-size="9" text-anchor="middle">GPU 2</text>
+
+                <rect x="320" y="180" width="70" height="25" fill="#141414" stroke="#FFFFFF" stroke-width="1"/>
+                <text x="355" y="196" fill="#FFFFFF" font-family="monospace" font-size="9" text-anchor="middle">GPU 3</text>
+
+                <rect x="400" y="180" width="70" height="25" fill="#141414" stroke="#FFFFFF" stroke-width="1"/>
+                <text x="435" y="196" fill="#FFFFFF" font-family="monospace" font-size="9" text-anchor="middle">GPU 4</text>
+
+                <rect x="480" y="180" width="70" height="25" fill="#141414" stroke="#FFFFFF" stroke-width="1"/>
+                <text x="515" y="196" fill="#FFFFFF" font-family="monospace" font-size="9" text-anchor="middle">GPU 5</text>
+
+                <rect x="560" y="180" width="70" height="25" fill="#141414" stroke="#FFFFFF" stroke-width="1"/>
+                <text x="595" y="196" fill="#FFFFFF" font-family="monospace" font-size="9" text-anchor="middle">GPU 6</text>
+
+                <rect x="640" y="180" width="70" height="25" fill="#141414" stroke="#FFFFFF" stroke-width="1"/>
+                <text x="675" y="196" fill="#FFFFFF" font-family="monospace" font-size="9" text-anchor="middle">GPU 7</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Telemetry Footer Bar inside schematic -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10 font-mono text-[10px] text-neutral-400">
+            <div>
+              <span class="block text-neutral-600">CROSS-NODE JITTER</span>
+              <span class="text-white font-bold">&lt; 0.85 µs</span>
+            </div>
+            <div>
+              <span class="block text-neutral-600">PACKET DROP RATE</span>
+              <span class="text-[#00FF66] font-bold">0.00000% (PFC ENABLED)</span>
+            </div>
+            <div>
+              <span class="block text-neutral-600">TOPOLOGY TYPE</span>
+              <span class="text-white font-bold">RAIL-OPTIMIZED FAT-TREE</span>
+            </div>
+            <div>
+              <span class="block text-neutral-600">STORAGE INTERFACE</span>
+              <span class="text-white font-bold">NVMe-oF 200 GB/S IOPS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Hardware Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="tech-card p-6 reveal-on-scroll">
+            <span class="font-mono text-[10px] text-[#0055FF] uppercase tracking-widest block mb-2">FABRIC COMPONENT // 01</span>
+            <h3 class="text-xl font-bold uppercase tracking-tight text-white mb-3 font-tech">Direct Memory Access</h3>
+            <p class="font-mono text-xs text-neutral-400 leading-relaxed">
+              Com GPUDirect RDMA, os dados trafegam diretamente da interface de rede InfiniBand para a memória HBM3 da GPU, eliminando 100% dos gargalos da CPU host.
+            </p>
+          </div>
+
+          <div class="tech-card p-6 reveal-on-scroll">
+            <span class="font-mono text-[10px] text-[#0055FF] uppercase tracking-widest block mb-2">FABRIC COMPONENT // 02</span>
+            <h3 class="text-xl font-bold uppercase tracking-tight text-white mb-3 font-tech">Liquid Immersion Cooling</h3>
+            <p class="font-mono text-xs text-neutral-400 leading-relaxed">
+              Datacenters refrigerados por líquido dielétrico direto na matriz (Direct-to-Chip D2C). Permite sustentação de TDP contínuo de 700W por GPU com PUE récorde de 1.08.
+            </p>
+          </div>
+
+          <div class="tech-card p-6 reveal-on-scroll">
+            <span class="font-mono text-[10px] text-[#0055FF] uppercase tracking-widest block mb-2">FABRIC COMPONENT // 03</span>
+            <h3 class="text-xl font-bold uppercase tracking-tight text-white mb-3 font-tech">Zero-Knowledge Settlement</h3>
+            <p class="font-mono text-xs text-neutral-400 leading-relaxed">
+              Alocação bare-metal auditável e computação confidencial por hardware (NVIDIA CC). Suas chaves de pesos, dados de treino e saídas de inferência nunca são expostos.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 03: BENCHMARKS & SPEC MATRIX (Engineered Comparisons) -->
+    <section id="benchmarks" class="py-24 border-b border-white/10 bg-[#050505]">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="mb-14 reveal-on-scroll">
+          <span class="font-mono text-xs uppercase tracking-[0.3em] text-[#0055FF] font-bold block mb-2">03 // HARDWARE SPEC MATRIX</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase tracking-tight font-tech">
+            INDUSTRIAL SPECIFICATIONS
+          </h2>
+        </div>
+
+        <!-- Technical Table -->
+        <div class="border border-white/10 overflow-x-auto reveal-on-scroll">
+          <table class="w-full text-left font-mono text-xs">
+            <thead class="bg-[#0A0A0A] border-b border-white/10 text-neutral-400 uppercase text-[10px] tracking-widest">
+              <tr>
+                <th class="p-4 border-r border-white/10">SYSTEM ARCHITECTURE</th>
+                <th class="p-4 border-r border-white/10">MEMORY DENSITY</th>
+                <th class="p-4 border-r border-white/10">INTERCONNECT</th>
+                <th class="p-4 border-r border-white/10">FP8 TFLOPS</th>
+                <th class="p-4">HOURLY RATE (ON-DEMAND)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 border-r border-white/10 font-bold text-white">NVIDIA H100 SXM5 [8x Node]</td>
+                <td class="p-4 border-r border-white/10 text-neutral-300">640 GB HBM3 (3.35 TB/s)</td>
+                <td class="p-4 border-r border-white/10 text-[#0055FF] font-bold">3.2 Tbps InfiniBand</td>
+                <td class="p-4 border-r border-white/10 text-white">15,832 TFLOPS</td>
+                <td class="p-4 font-bold text-white">$19.60 / hr node</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors bg-white/[0.01]">
+                <td class="p-4 border-r border-white/10 font-bold text-white">NVIDIA B200 NVLink 5 [8x Node]</td>
+                <td class="p-4 border-r border-white/10 text-neutral-300">1,536 GB HBM3e (8.0 TB/s)</td>
+                <td class="p-4 border-r border-white/10 text-[#0055FF] font-bold">3.2 Tbps InfiniBand</td>
+                <td class="p-4 border-r border-white/10 text-white">36,000 TFLOPS</td>
+                <td class="p-4 font-bold text-[#00FF66]">$34.00 / hr node</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 border-r border-white/10 font-bold text-white">NVIDIA H200 SXM5 [8x Node]</td>
+                <td class="p-4 border-r border-white/10 text-neutral-300">1,128 GB HBM3e (4.8 TB/s)</td>
+                <td class="p-4 border-r border-white/10 text-[#0055FF] font-bold">3.2 Tbps InfiniBand</td>
+                <td class="p-4 border-r border-white/10 text-white">15,832 TFLOPS</td>
+                <td class="p-4 font-bold text-white">$23.50 / hr node</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 border-r border-white/10 font-bold text-white">NVIDIA L40S [8x Node - Inference]</td>
+                <td class="p-4 border-r border-white/10 text-neutral-300">384 GB GDDR6 (864 GB/s)</td>
+                <td class="p-4 border-r border-white/10 text-neutral-400">400 Gbps PCIe Gen 4</td>
+                <td class="p-4 border-r border-white/10 text-white">5,864 TFLOPS</td>
+                <td class="p-4 font-bold text-white">$10.80 / hr node</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 04: REAL-TIME INTERACTIVE CLUSTER CALCULATOR -->
+    <section id="calculator" class="py-24 border-b border-white/10 bg-[#080808]">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <div class="lg:col-span-5 reveal-on-scroll">
+            <span class="font-mono text-xs uppercase tracking-[0.3em] text-[#0055FF] font-bold block mb-2">04 // SIMULATION ENGINE</span>
+            <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase tracking-tight font-tech mb-6">
+              INSTANT CLUSTER SIZING
+            </h2>
+            <p class="font-mono text-xs sm:text-sm text-neutral-400 leading-relaxed mb-8">
+              Configure instâncias bare-metal dedicadas de acordo com as necessidades de memória de parâmetros e taxa de inferência em tokens por segundo do seu modelo de IA.
+            </p>
+
+            <div class="border border-white/10 bg-[#050505] p-5 font-mono text-xs text-neutral-400 space-y-2">
+              <div class="flex justify-between">
+                <span>PROVISIONING TIME:</span>
+                <span class="text-white font-bold">&lt; 180 SECONDS</span>
+              </div>
+              <div class="flex justify-between">
+                <span>BILLING RESOLUTION:</span>
+                <span class="text-white font-bold">PER-SECOND ACCRUAL</span>
+              </div>
+              <div class="flex justify-between">
+                <span>INFRASTRUCTURE ROOT:</span>
+                <span class="text-[#0055FF] font-bold">FULL ROOT ACCESS // SSH</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Calculator Interface (100% Native JS in js/app.js) -->
+          <div class="lg:col-span-7 border border-white/15 bg-[#0A0A0A] p-6 sm:p-8 reveal-on-scroll">
+            
+            <div class="space-y-6">
+              <!-- Select GPU Architecture -->
+              <div>
+                <label for="calc-gpu-type" class="block font-mono text-xs uppercase tracking-widest text-neutral-400 mb-2">
+                  CHOOSE GPU ACCELERATOR ARCHITECTURE
+                </label>
+                <select id="calc-gpu-type" class="w-full bg-[#050505] border border-white/20 text-white font-mono text-xs p-3.5 focus:border-[#0055FF] focus:outline-none">
+                  <option value="H100">NVIDIA H100 SXM5 (80GB HBM3 - High-Throughput Baseline)</option>
+                  <option value="B200">NVIDIA Blackwell B200 (192GB HBM3e - Next-Gen Frontier)</option>
+                </select>
+              </div>
+
+              <!-- Node Range Slider -->
+              <div>
+                <div class="flex justify-between font-mono text-xs uppercase text-neutral-400 mb-2">
+                  <span>SCALE ACCELERATORS</span>
+                  <span id="calc-node-count" class="text-white font-bold">8x H100 SXM5</span>
+                </div>
+                <input 
+                  type="range" 
+                  id="calc-nodes-slider" 
+                  min="8" 
+                  max="64" 
+                  step="8" 
+                  value="8" 
+                  class="w-full h-2 bg-[#1A1A1A] accent-[#0055FF] cursor-pointer"
+                >
+                <div class="flex justify-between font-mono text-[10px] text-neutral-600 mt-2">
+                  <span>8 GPUs (1 Node)</span>
+                  <span>16 GPUs</span>
+                  <span>32 GPUs</span>
+                  <span>64 GPUs (SuperPOD)</span>
+                </div>
+              </div>
+
+              <!-- Real-Time Metrics Output Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-white/10 font-mono">
+                <div class="bg-[#050505] border border-white/10 p-4">
+                  <span class="block text-[10px] text-neutral-500 uppercase">AGGREGATE VRAM</span>
+                  <span id="calc-vram-total" class="text-lg font-bold text-white block mt-1">640 GB HBM3</span>
+                  <span class="text-[10px] text-neutral-600">Non-fragmented</span>
+                </div>
+                <div class="bg-[#050505] border border-white/10 p-4">
+                  <span class="block text-[10px] text-neutral-500 uppercase">EST. GENERATION</span>
+                  <span id="calc-throughput" class="text-lg font-bold text-[#0055FF] block mt-1">16.8k tok/s</span>
+                  <span class="text-[10px] text-neutral-600">Llama-3.3 70B FP8</span>
+                </div>
+                <div class="bg-[#050505] border border-white/10 p-4">
+                  <span class="block text-[10px] text-neutral-500 uppercase">EST. CLUSTER COST</span>
+                  <span id="calc-price-hour" class="text-lg font-bold text-[#00FF66] block mt-1">$19.60 / hr</span>
+                  <span class="text-[10px] text-neutral-600">Zero ingress/egress fees</span>
+                </div>
+              </div>
+
+              <!-- Instant Deploy CTA -->
+              <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                <a 
+                  href="https://wa.me/5511945549000?text=Ol%C3%A1%2C%20gostaria%20de%20provisionar%20um%20cluster%20dedicado%20de%20GPUs%20na%20KILONODE!" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="btn-tech-primary w-full sm:w-auto"
+                >
+                  <span>INICIAR PROVISIONAMENTO IMEDIATO</span>
+                  <span>→</span>
+                </a>
+                <span class="font-mono text-[10px] text-neutral-500 text-center sm:text-left">
+                  Configuração bare-metal pronta em &lt; 3 minutos
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 05: GLOBAL DATACENTER FOOTPRINT & PUE -->
+    <section id="network" class="py-24 border-b border-white/10 bg-[#050505]">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-white/10 reveal-on-scroll">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-[0.3em] text-[#0055FF] font-bold block mb-2">05 // GLOBAL FOOTPRINT</span>
+            <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase tracking-tight font-tech">
+              TIER-IV DATA CENTERS
+            </h2>
+          </div>
+          <div class="mt-4 md:mt-0 font-mono text-xs text-neutral-400 max-w-md">
+            Instalações de computação de missão crítica com redundância 2N de energia, energia 100% renovável e rotas diretas para os principais backbones mundiais.
+          </div>
+        </div>
+
+        <!-- 3 Global Nodes Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="tech-card p-6 reveal-on-scroll">
+            <div class="flex justify-between items-center font-mono text-[10px] text-neutral-500 uppercase pb-3 border-b border-white/10 mb-4">
+              <span>FACILITY // 01</span>
+              <span class="text-[#00FF66] font-bold">OPERATIONAL</span>
+            </div>
+            <div class="aspect-video overflow-hidden mb-4 bg-black border border-white/10">
+              <img src="img/server-node-cluster.jpg" alt="Cluster de servidores de alta densidade no Datacenter US-East" class="w-full h-full object-cover grayscale contrast-125">
+            </div>
+            <h3 class="text-xl font-bold uppercase tracking-tight text-white mb-1 font-tech">US-East (Ashburn, VA)</h3>
+            <p class="font-mono text-xs text-neutral-400 mb-4">
+              Capacidade instalada de 32 MW dedicados exclusivamente a clusters H100. Latência de 2ms para os maiores pontos de troca de tráfego do Atlântico.
+            </p>
+            <div class="font-mono text-[10px] text-neutral-500 pt-3 border-t border-white/5 flex justify-between">
+              <span>AVAILABLE GPUS:</span>
+              <span class="text-white font-bold">6,400 H100 SXM5</span>
+            </div>
+          </div>
+
+          <div class="tech-card p-6 reveal-on-scroll">
+            <div class="flex justify-between items-center font-mono text-[10px] text-neutral-500 uppercase pb-3 border-b border-white/10 mb-4">
+              <span>FACILITY // 02</span>
+              <span class="text-[#00FF66] font-bold">OPERATIONAL</span>
+            </div>
+            <div class="aspect-video overflow-hidden mb-4 bg-black border border-white/10">
+              <img src="img/silicon-die.jpg" alt="Matriz de silício de processadores de IA no Datacenter EU-Central" class="w-full h-full object-cover grayscale contrast-125">
+            </div>
+            <h3 class="text-xl font-bold uppercase tracking-tight text-white mb-1 font-tech">EU-Central (Frankfurt, DE)</h3>
+            <p class="font-mono text-xs text-neutral-400 mb-4">
+              Alimentado por energia geotérmica e eólica certificada. Total conformidade com GDPR e soberania de dados europeia com NVIDIA CC ativo.
+            </p>
+            <div class="font-mono text-[10px] text-neutral-500 pt-3 border-t border-white/5 flex justify-between">
+              <span>AVAILABLE GPUS:</span>
+              <span class="text-white font-bold">4,800 H100 / B200</span>
+            </div>
+          </div>
+
+          <div class="tech-card p-6 reveal-on-scroll">
+            <div class="flex justify-between items-center font-mono text-[10px] text-neutral-500 uppercase pb-3 border-b border-white/10 mb-4">
+              <span>FACILITY // 03</span>
+              <span class="text-[#00FF66] font-bold">OPERATIONAL</span>
+            </div>
+            <div class="aspect-video overflow-hidden mb-4 bg-black border border-white/10">
+              <img src="img/datacenter-architecture.jpg" alt="Infraestrutura de refrigeração líquida no Datacenter SA-East" class="w-full h-full object-cover grayscale contrast-125">
+            </div>
+            <h3 class="text-xl font-bold uppercase tracking-tight text-white mb-1 font-tech">SA-East (São Paulo, BR)</h3>
+            <p class="font-mono text-xs text-neutral-400 mb-4">
+              O cluster de IA mais avançado da América Latina. Conexão direta com o IX.br para inferência de baixa latência em todo o território nacional.
+            </p>
+            <div class="font-mono text-[10px] text-neutral-500 pt-3 border-t border-white/5 flex justify-between">
+              <span>AVAILABLE GPUS:</span>
+              <span class="text-white font-bold">3,080 H100 SXM5</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 06: TECHNICAL FAQ -->
+    <section id="faq" class="py-24 border-b border-white/10 bg-[#080808]">
+      <div class="max-w-4xl mx-auto px-6 md:px-12">
+        
+        <div class="text-center mb-16 reveal-on-scroll">
+          <span class="font-mono text-xs uppercase tracking-[0.3em] text-[#0055FF] font-bold block mb-2">06 // DOCUMENTATION &amp; INQUIRIES</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase tracking-tight font-tech mb-4">
+            FREQUENTLY ANSWERED SPECS
+          </h2>
+          <p class="font-mono text-xs text-neutral-400">
+            Respostas técnicas diretas sobre faturamento, acesso aos nós e topologia de rede.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <div class="border border-white/10 bg-[#0A0A0A] reveal-on-scroll">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-mono text-sm font-bold text-white uppercase">As instâncias contam com hipervisor ou são 100% Bare-Metal?</span>
+              <svg class="faq-chevron w-5 h-5 text-neutral-400 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 font-mono text-xs text-neutral-400 leading-relaxed border-t border-white/5 pt-4">
+              Todas as instâncias da KILONODE são 100% bare-metal. Não há camadas de virtualização (KVM, ESXi) intermediárias que degradem o barramento PCIe ou a memória GPU. Você obtém acesso direto root via chave SSH com Ubuntu Server, CUDA Toolkit e drivers oficiais NVIDIA pré-instalados ou imagem limpa de sua preferência.
+            </div>
+          </div>
+
+          <div class="border border-white/10 bg-[#0A0A0A] reveal-on-scroll">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-mono text-sm font-bold text-white uppercase">Como funciona a taxa de transferência de dados (Ingress &amp; Egress)?</span>
+              <svg class="faq-chevron w-5 h-5 text-neutral-400 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 font-mono text-xs text-neutral-400 leading-relaxed border-t border-white/5 pt-4">
+              Ao contrário das nuvens legadas (AWS, GCP, Azure), a KILONODE adota a política de Zero Egress Tax. Toda a transferência de entrada e saída nos nós é gratuita, limitada apenas pela capacidade nominal da interface de rede (até 400 Gbps públicos por nó).
+            </div>
+          </div>
+
+          <div class="border border-white/10 bg-[#0A0A0A] reveal-on-scroll">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-mono text-sm font-bold text-white uppercase">Qual o tempo de provisionamento após a solicitação?</span>
+              <svg class="faq-chevron w-5 h-5 text-neutral-400 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 font-mono text-xs text-neutral-400 leading-relaxed border-t border-white/5 pt-4">
+              Nossos nós mantêm imagens em standby frio prontas para inicialização automática em menos de 180 segundos. Para clusters personalizados com interconexão multi-node (InfiniBand Slurm / Ray), o orquestrador automatizado entrega o ambiente operacional em até 10 minutos.
+            </div>
+          </div>
+
+          <div class="border border-white/10 bg-[#0A0A0A] reveal-on-scroll">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-mono text-sm font-bold text-white uppercase">Quais métodos de faturamento e pagamento são aceitos?</span>
+              <svg class="faq-chevron w-5 h-5 text-neutral-400 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 font-mono text-xs text-neutral-400 leading-relaxed border-t border-white/5 pt-4">
+              Oferecemos cobrança por segundo em instâncias on-demand e contratos com desconto institucional para reservas anuais. Aceitamos faturamento corporativo via transferência bancária internacional (Wire / SWIFT), cartões corporativos, PIX e stablecoins (USDC / USDT via smart contract sem fricção cambial).
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION TERMINAL BANNER -->
+    <section class="py-20 bg-[#050505] border-b border-white/10 relative">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 text-center reveal-on-scroll">
+        <div class="inline-block border border-[#0055FF] bg-[#0A0A0A] px-3 py-1 font-mono text-[11px] text-[#0055FF] uppercase tracking-widest mb-6">
+          INSTANT ACCESS // BARE-METAL INFRASTRUCTURE
+        </div>
+        <h2 class="text-4xl sm:text-6xl font-bold uppercase tracking-tight text-white mb-6 font-tech">
+          START COMPUTING AT RAW VELOCITY
+        </h2>
+        <p class="font-mono text-xs sm:text-sm text-neutral-400 max-w-xl mx-auto mb-10 leading-relaxed">
+          Provisione nós isolados ou clusters em grande escala com zero burocracia e latência mínima. Fale diretamente com nossos engenheiros de infraestrutura.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="https://wa.me/5511945549000?text=Ol%C3%A1%2C%20quero%20fazer%20uma%20reserva%20de%20cluster%20H100%20na%20KILONODE!" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="btn-tech-primary"
+          >
+            <span>FALAR COM ENGENHARIA VIA WHATSAPP</span>
+            <span>→</span>
+          </a>
+          <a href="#calculator" class="btn-tech-secondary">
+            <span>CALCULAR INSTÂNCIA</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ARCHITECTURAL MINIMALIST FOOTER -->
+  <footer class="bg-[#050505] text-neutral-400 pt-16 pb-12 border-t border-white/10 font-mono text-xs">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        
+        <div class="md:col-span-5 flex flex-col">
+          <div class="flex items-center gap-3.5 mb-4">
+            <div class="w-8 h-8 border border-white/20 bg-black p-1 flex items-center justify-center">
+              <img src="logo.png" alt="KILONODE Emblem" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <span class="font-bold text-lg text-white tracking-tight font-tech">KILONODE</span>
+              <span class="block text-[9px] tracking-[0.25em] text-[#0055FF] font-bold uppercase">COMPUTE FABRIC</span>
+            </div>
+          </div>
+          <p class="text-xs text-neutral-500 leading-relaxed max-w-sm">
+            High-performance bare-metal infrastructure engineered for frontier artificial intelligence models and distributed low-latency clusters.
+          </p>
+        </div>
+
+        <div class="md:col-span-3">
+          <span class="text-xs uppercase tracking-widest text-white font-bold block mb-4">Navigation</span>
+          <ul class="space-y-2 text-xs text-neutral-400">
+            <li><a href="#inicio" class="hover:text-white transition-colors">01 // Overview</a></li>
+            <li><a href="#architecture" class="hover:text-white transition-colors">02 // Topology</a></li>
+            <li><a href="#benchmarks" class="hover:text-white transition-colors">03 // Specs Matrix</a></li>
+            <li><a href="#calculator" class="hover:text-white transition-colors">04 // Calculator</a></li>
+            <li><a href="#network" class="hover:text-white transition-colors">05 // Datacenters</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">06 // FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <span class="text-xs uppercase tracking-widest text-white font-bold block mb-4">Network Operations</span>
+          <div class="space-y-2.5 text-xs text-neutral-400">
+            <p class="flex items-center gap-2">
+              <span class="text-[#0055FF]">🌐</span> Global Routing: US-East • EU-Central • SA-East
+            </p>
+            <p class="flex items-center gap-2 font-mono">
+              <span class="text-[#0055FF]">📞</span> (11) 94554-9000
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="text-[#0055FF]">⚡</span> Encrypted Telemetry // 99.995% SLA
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] text-neutral-600 gap-4 uppercase tracking-widest">
+        <p>© 2026 KILONODE Infrastructure Corp. All architecture specs reserved.</p>
+        <p>Industrial Brutalist Minimalism • Clean Silicon Engine</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript (Strict AGENTS.md 1.2 Zero Inline Scripts) -->
+  <script src="js/app.js"></script>
+</body>
+</html>
